@@ -1,0 +1,24 @@
+[package]
+name = "consensource"
+version = "0.1.0"
+authors = [ "Adeeb Ahmed adeeb.ahmed@target.com" ]
+
+[[bin]]
+name = "cli"
+path = "cli/src/main.rs"
+
+[lib]
+name = "cli"
+path = "common/src/lib.rs"
+
+[[bin]]
+name = "processor"
+path = "processor/src/main.rs"
+
+[[bin]]
+name = "rest_api"
+path = "rest_api/src/main.rs"
+
+[[bin]]
+name = "state_delta_subscriber"
+path = "state_delta_subscriber/src/main.rs"
