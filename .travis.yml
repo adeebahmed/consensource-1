@@ -19,7 +19,7 @@ before_install:
 
 before_script:
   - sudo su root
-  - sudo ssh-keygen -b 2048 -t rsa -f /tmp/sshkey -q -N ""
+  - sudo cat /dev/zero | ssh-keygen -q -N ""
   - sudo apt-get update && apt-get install -y \
     unzip \
     libzmq3-dev
