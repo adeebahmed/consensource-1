@@ -16,6 +16,9 @@ before_install:
 #- docker pull target/consensource:linter-nightly
 
 before_script:
+  - apt-get update && apt-get install -y \
+    unzip \
+    libzmq3-dev
   - cd cli
 # script:
 # - docker run -it -v $(pwd):/consensource target/consensource:linter /bin/sh -c "cd /consensource; cd cli && cargo fmt -- --check; cd ../common && cargo fmt -- --check; cd ../database && cargo fmt -- --check; cd ../processor && cargo fmt -- --check; cd ../state_delta_subscriber && cargo fmt -- --check; cd ..;"
